@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<center><a href="{% url 'finalapp:irfanwebss'  %}" class="btn btn-success">GO BACK</a> </center>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{forms.as_p}}
+    <input type="submit">
+
+</form>
+
+{% endblock %}

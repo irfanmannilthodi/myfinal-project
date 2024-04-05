@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{dcc.img.url}}" width="500" height="500"><br>
+            <a href="{% url 'finalapp:update1' dcc.id  %}" class="btn btn-warning">UPDATE</a>
+<a href="{% url 'finalapp:delete3' dcc.id  %}" class="btn btn-danger">DELETE</a>
+    <a href="{% url 'finalapp:add1'   %}" class="btn btn-success">ADD </a>
+    <a href="{% url 'finalapp:irfanweb'   %}" class="btn btn-primary">HOME</a>
+            <a href="https://youtu.be/6ZfuNTqbHE8?si=CmnkAMxDLHZPZHjc" CLASS="btn btn-danger">GO PAGE</a>
+        </div>
+<div class="col-md-6">
+  <h5> <b>{{dcc.name}}</b></h5>
+    <i style="color:white;">{{dcc.desc}}</i><br>
+    <h5>Cast:</h5>
+   <i style="color:white;">{{dcc.cast}}</i> <br>
+    <h5>Release Date:</h5>
+    <i style="color:white;">{{dcc.year}}</i><br>
+
+    <h5>Review:</h5>
+   <i style="color:white;" >{{dcc.category}}</i>
+
+    </div>
+
+
+
+    </div>
+</div>
+{% endblock %}
+

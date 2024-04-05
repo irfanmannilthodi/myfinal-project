@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <b>Are you sure want to delete this</b>
+    <input type="submit">
+        <center><a href="{% url 'finalapp:irfanwebss' %}" class="btn btn-success">GO BACK</a> </center>
+    </form>
+{% endblock %}

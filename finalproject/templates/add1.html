@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="enter your movie name"><br>
+    <input type="text" name="desc" placeholder="enter your movie description"><br>
+    <input type="file" name="img"><br>
+    <input type="date" name="year" placeholder="enter your movie date"><br>
+    <input type="text" name="cast" placeholder="enter your movie actors"><br>
+    <input type="text" name="category" placeholder="enter your movie review"><br>
+    <input type="submit"><br>
+    <center><a href="{% url 'finalapp:irfanwebs' %}" class="btn btn-success">GO BACK</a> </center>
+</form>
+{% endblock %}

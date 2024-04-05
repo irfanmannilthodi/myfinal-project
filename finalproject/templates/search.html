@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+  <p class="text-center my_search_text">You have searched for:<b>"{{query}}</b></p>
+</div>
+<div class="container">
+    <div class="row">
+        {% for i in marvel %}
+        <div class="col-md-4">
+            <br>
+            <div class="card" style="width: 20rem;">
+  <img src="{{i.img.url}}" class="card-img-top" alt="..." width="200px" height="200px">
+  <div class="card-body">
+    <h5 class="card-title">{{i.name}}</h5>
+    <p class="card-text">{{i.year}}</p>
+       <p class="card-text">{{i.category}}</p>
+    <a href="{% url 'finalapp:detail' i.id %}" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+        </div>
+        <br>
+        {% endfor %}
+        </div>
+    </div>
+    {% empty %}
+<div class="row mx-auto">
+    <p class="text-center my_search_text">0 results found</p>
+</div>
+{% endfor %}
+
+
+{% endblock %}

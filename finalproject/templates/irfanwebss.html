@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for i in monster %}
+        <div class="col-md-4">
+            <br>
+            <div class="card" style="width: 20rem;">
+  <img src="{{i.img.url}}" class="card-img-top" alt="..." width="200px" height="200px">
+  <div class="card-body">
+    <h5 class="card-title">{{i.name}}</h5>
+    <p class="card-text">{{i.year}}</p>
+<!--       <p class="card-text">{{i.category}}</p>-->
+    <a href="{% url 'finalapp:detail2' i.id %}" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+        </div>
+        <br>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
